@@ -6,6 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Edit Product</h1>
+        <fieldset>
+            <legend>Edit Product</legend>
+            <table>
+                <tr>
+                    <td><label for="name">Name: </label></td>
+                    <td><input type="text" id="name" name="name"></td>
+                </tr>
+                <tr> 
+                    <td><label for="bprice">Buying Price: </label></td> 
+                    <td><input type="number" id="bprice" name="bprice" min="0" max="10000"></td>
+                </tr>
+                <tr> 
+                    <td><label for="sprice">Selling Price: </label></td> 
+                    <td><input type="number" id="sprice" name="sprice" min="0" max="10000"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                        <input type="checkbox" id="display" name="display">
+                        <label for="display">Display</label>
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Save">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
 </body>
 </html>
