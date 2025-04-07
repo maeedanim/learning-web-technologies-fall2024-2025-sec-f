@@ -9,28 +9,33 @@
     <form>
         <fieldset>
             <legend>Add Product</legend>
-
-            <label for="name">Name:
-            </label>
-            <input type="text" id="name" name="name"><br>
-            <br>
-
-            <label for="bprice">Buying Price:
-            </label>
-            <input type="number" id="bprice" name="bprice" min="0" max="10000"><br>
-            <br>
-
-            <label for="sprice">Selling Price:
-            </label>
-            <input type="number" id="sprice" name="sprice" min="0" max="10000"><br>
-            <br>
-            <hr>
-            <input type="checkbox" value="display">
-            <label for="display">Display: </label><br>
-            <hr>
-            <input type="button" value="Save"><br>
-            <br>
-
+            <table width="300"> <!-- Set a smaller width -->
+                <tr>
+                    <td><label for="name">Name: </label></td>
+                    <td><input type="text" id="name" name="name"></td>
+                </tr>
+                <tr> 
+                    <td><label for="bprice">Buying Price: </label></td> 
+                    <td><input type="number" id="bprice" name="bprice" min="0" max="10000"></td>
+                </tr>
+                <tr> 
+                    <td><label for="sprice">Selling Price: </label></td> 
+                    <td><input type="number" id="sprice" name="sprice" min="0" max="10000"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <hr>
+                        <input type="checkbox" id="display" name="display">
+                        <label for="display">Display</label>
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Save">
+                    </td>
+                </tr>
+            </table>
         </fieldset>
 
     </form>

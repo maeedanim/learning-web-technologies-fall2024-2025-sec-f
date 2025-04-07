@@ -9,34 +9,38 @@
 
 <body>
     <form action="/login.html">
-
         <h1>Change Password</h1>
         <fieldset>
             <legend>Enter New Password</legend>
+            <table width="400">
 
-            <label for="uname">UserName:
-            </label>
-            <input type="text" id="uname" name="uname"><br>
-            <br>
+                <tr>
+                    <td><label for="uname">Username:</label></td>
+                    <td><input type="text" id="uname" name="uname"></td>
+                </tr>
 
-            <label for="email">Email:
-            </label>
-            <input type="email" id="email" name="email"><br>
-            <br>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
 
-            <label for="pword">New Password:
-            </label>
-            <input type="password" id="pword" name="fname">
-            <label for="pword">Confirm Password:
-            </label>
-            <input type="password" id="pword" name="fname"><br>
-            <br>
-            <input type="submit" value="Submit"><br>
+                <tr>
+                    <td><label for="pword">New Password:</label></td>
+                    <td><input type="password" id="pword" name="pword"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="cpword">Confirm Password:</label></td>
+                    <td><input type="password" id="cpword" name="cpword"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><input type="submit" value="Submit"></td>
+                </tr>
+                
+            </table>
         </fieldset>
     </form>
-
-
-
 </body>
 
 </html>
