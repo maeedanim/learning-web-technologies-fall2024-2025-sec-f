@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date of Birth</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Date of Birth</title>
+  <script>
+    function validateDOB(event) {
+      event.preventDefault();
+
+      // Get values
+      let dd = document.getElementById("dd").value.trim();
+      let mm = document.getElementById("mm").value.trim();
+      let yyyy = document.getElementById("yyyy").value.trim();
+
+      // Check if any are empty
+      if (dd === "" || mm === "" || yyyy === "") {
+        alert("Date, Month, and Year cannot be empty.");
+        return;
+      }
+
+      // Convert to numbers
+      let day = parseInt(dd, 10);
+      let month = parseInt(mm, 10);
+      let year = parseInt(yyyy, 10);
+
+      // Validate numbers
+      if (isNaN(day) || day < 0 || day > 31) {
+        alert("Day must be a valid number between 0 and 31.");
+        return;
+      }
+
+      if (isNaN(month) || month < 1 || month > 12) {
+        alert("Month must be a valid number between 1 and 12.");
+        return;
+      }
+
+      if (isNaN(year) || year < 1900 || year > 2016) {
+        alert("Year must be between 1900 and 2016.");
+        return;
+      }
+
+      alert("Date of Birth is valid!");
+    }
+  </script>
 </head>
 <body>
-    <form>
-        <fieldset>
-            <legend><b>Date of Birth</b></legend>
-
-            <!-- Labels above inputs -->
-            <table>
-                <tr>
-                    <td>dd</td>
-                    <td>mm</td>
-                    <td>yyyy</td>
-                </tr>
-                <tr>
-                    <td><input type="text" size="2"></td>
-                    <td>/</td>
-                    <td><input type="text" size="2"></td>
-                    <td>/</td>
-                    <td><input type="text" size="4"></td>
-                </tr>
-            </table>
-            <hr>
-            <input type="submit" value="Submit">
-        </fieldset>
-    </form>
+  <form onsubmit="validateDOB(event)">
+    <fieldset>
+      <legend><b>Date of Birth</b></legend>
+      <table>
+        <tr>
+          <td>dd</td>
+          <td>mm</td>
+          <td>yyyy</td>
+        </tr>
+        <tr>
+          <td><input type="text" id="dd" size="2" /></td>
+          <td>/</td>
+          <td><input type="text" id="mm" size="2" /></td>
+          <td>/</td>
+          <td><input type="text" id="yyyy" size="4" /></td>
+        </tr>
+      </table>
+      <hr />
+      <input type="submit" value="Submit" />
+    </fieldset>
+  </form>
 </body>
 </html>
